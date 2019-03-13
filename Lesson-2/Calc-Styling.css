@@ -39,7 +39,7 @@ header {
 }
 /* Reset button */
 
-#Result {
+#result1, #result2 {
   background: rgba(201,120,116,.28);
   color:#c97874;
   font-weight: 400;
