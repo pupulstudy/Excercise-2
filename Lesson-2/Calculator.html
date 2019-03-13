@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<link rel="stylesheet" type="text/css" href="Calc-Styling.css">
+</head>
+<body>
+
+	<div class="inner-base">
+		<header>
+			<h1>My Simple <span class="emph"><strong>SUM</strong></span> Calculator</h1>
+			<p>Not a <span class="sm"><small>REAL CALCULATOR</small></span> <span class="emph"><strong>I KNOW !</strong></span></p>
+		</header>
+
+
+		<!-- form start -->
+		<form name="formcalc">
+
+			<!-- Number 1 start	 -->
+			<div>
+				<label for="no-1">Number 1: </label>
+				<input type="text" name="Number1" id="no-1" placeholder="Enter your number here">
+			</div>
+			<!-- Number 1 ends	 -->
+
+			<!-- Number 2 start	 -->
+			<div>
+				<label for="no-2">Number 2: </label>
+				<input type="text" name="Number2" id="no-2" placeholder="Enter your number here">
+			</div>
+			<!-- Number 2 ends	 -->
+
+			<!-- Number 3 start	 -->
+			<div>
+				<label for="no-3">Number 3: </label>
+				<input type="text" name="Number3" id="no-3" placeholder="Enter your number here">
+			</div>
+			<!-- Number 3 ends	 -->
+
+			<!-- Result start -->
+			<div>
+				<label for="Result">Result</label>
+				<input type="text" name="txtres" id="Result">
+			</div>
+			<!-- Result ends -->
+
+			<!-- Button start -->
+			<div>
+				<input type="button" name="submit" value="Calculate" onClick="sumValues()">
+			</div>
+			<!-- Button ends -->
+
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+		function sumValues()
+		{
+			// var num1, num2, res;
+			// num1=Number(document.formcalc.Number1.value);
+			// num2=Number(document.formcalc.Number2.value);
+			// res=num1+num2;
+			// document.formcalc.txtres.value=res;
+
+			var num1, num2, num3, res;
+			num1=Number(document.formcalc.Number1.value);
+			num2=Number(document.formcalc.Number2.value);
+			num3=Number(document.formcalc.Number3.value);
+			res=num1+num2+num3;
+			document.formcalc.txtres.value=res;
+		}
+
+	</script>
+</body>
+</html>
