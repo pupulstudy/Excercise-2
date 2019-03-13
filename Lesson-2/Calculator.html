@@ -3,74 +3,113 @@
 <head>
 	<title>Simple Calculator</title>
 	<link rel="stylesheet" type="text/css" href="Calc-Styling.css">
+	<script src="Calc-Main.js" ="text/javascript"></script>
 </head>
 <body>
 
 	<div class="inner-base">
-		<header>
-			<h1>My Simple <span class="emph"><strong>SUM</strong></span> Calculator</h1>
-			<p>Not a <span class="sm"><small>REAL CALCULATOR</small></span> <span class="emph"><strong>I KNOW !</strong></span></p>
-		</header>
+
+		<!-- SUM CALC START -->
+
+		<div class="Sum-Calc">
+			<header>
+				<h1>My Simple <span class="emph"><strong>SUM</strong></span> Calculator</h1>
+				<p>Not a <span class="sm"><small>REAL CALCULATOR</small></span> <span class="emph"><strong>I KNOW !</strong></span></p>
+			</header>
 
 
-		<!-- form start -->
-		<form name="formcalc">
+			<!-- form start -->
+			<form name="formcalc">
 
-			<!-- Number 1 start	 -->
-			<div>
-				<label for="no-1">Number 1: </label>
-				<input type="text" name="Number1" id="no-1" placeholder="Enter your number here">
-			</div>
-			<!-- Number 1 ends	 -->
+				<!-- Number 1 start	 -->
+				<div>
+					<label for="no-1">Number 1: </label>
+					<input type="text" name="Number1" id="no-1" placeholder="Enter your number here">
+				</div>
+				<!-- Number 1 ends	 -->
 
-			<!-- Number 2 start	 -->
-			<div>
-				<label for="no-2">Number 2: </label>
-				<input type="text" name="Number2" id="no-2" placeholder="Enter your number here">
-			</div>
-			<!-- Number 2 ends	 -->
+				<!-- Number 2 start	 -->
+				<div>
+					<label for="no-2">Number 2: </label>
+					<input type="text" name="Number2" id="no-2" placeholder="Enter your number here">
+				</div>
+				<!-- Number 2 ends	 -->
 
-			<!-- Number 3 start	 -->
-			<div>
-				<label for="no-3">Number 3: </label>
-				<input type="text" name="Number3" id="no-3" placeholder="Enter your number here">
-			</div>
-			<!-- Number 3 ends	 -->
+				<!-- Number 3 start	 -->
+				<div>
+					<label for="no-3">Number 3: </label>
+					<input type="text" name="Number3" id="no-3" placeholder="Enter your number here">
+				</div>
+				<!-- Number 3 ends	 -->
 
-			<!-- Result start -->
-			<div>
-				<label for="Result">Result</label>
-				<input type="text" name="txtres" id="Result">
-			</div>
-			<!-- Result ends -->
+				<!-- Button start -->
+				<div>
+					<input type="button" name="submit" value="Calculate" onClick="sumValues()">
+				</div>
+				<!-- Button ends -->
 
-			<!-- Button start -->
-			<div>
-				<input type="button" name="submit" value="Calculate" onClick="sumValues()">
-			</div>
-			<!-- Button ends -->
 
-		</form>
+				<!-- Result1 start -->
+				<div>
+					<label for="result1">Result</label>
+					<input type="text" name="txtres" id="result1">
+				</div>
+				<!-- Result1 ends -->
+			</form>
+		</div>
+
+		<!-- SUM CALC END -->
+
+		<!-- BETTER CALC START -->
+
+		<div class="Better-Calc">
+			<header>
+				<h1>My a bit <span class="emph"><strong>BETTER</strong></span> Calculator</h1>
+				<p><span class="emph"><strong>STILL</strong></span> Not a <span class="sm"><small>REAL CALCULATOR</small></span> <span class="emph"><strong>I KNOW !</strong></span></p>
+			</header>
+			<!-- form start -->
+			<form name="formcalcvar">
+				<!-- Var a start	 -->
+				<div>
+					<label for="value1">Number 1: </label>
+					<input type="text" id="value1" placeholder="Enter your number here">
+				</div>
+				<!-- Var a ends	 -->
+
+				<!-- Var b start	 -->
+				<div>
+					<label for="value2">Number 2: </label>
+					<input type="text" id="value2" placeholder="Enter your number here">
+				</div>
+				<!-- Var b ends	 -->
+
+				<!-- Operator start -->
+				<div class="Operator">
+					<label for="opt">Method :</label>
+					<select id="opt">
+						<option value="add">Add</option>
+						<option value="min">Minus</option>
+						<option value="div">Divide</option>
+						<option value="mul">Multiply</option>
+					</select>
+					<button type="button" onclick="calc()">Calculate</button>
+				</div>
+				<!-- Operator ends -->
+
+				<!-- Result start -->
+				<div>
+					<label for="result2">Result</label>
+					<input type="text" name="txtres" id="result2">
+				</div>
+				<!-- Result ends -->
+
+			</form>
+			<!-- form end -->
+
+		</div>
 	</div>
 
-	<script type="text/javascript">
+	<!-- BETTER CALC END -->
 
-		function sumValues()
-		{
-			// var num1, num2, res;
-			// num1=Number(document.formcalc.Number1.value);
-			// num2=Number(document.formcalc.Number2.value);
-			// res=num1+num2;
-			// document.formcalc.txtres.value=res;
-
-			var num1, num2, num3, res;
-			num1=Number(document.formcalc.Number1.value);
-			num2=Number(document.formcalc.Number2.value);
-			num3=Number(document.formcalc.Number3.value);
-			res=num1+num2+num3;
-			document.formcalc.txtres.value=res;
-		}
-
-	</script>
 </body>
 </html>
